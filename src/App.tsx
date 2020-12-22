@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box, Center, Button } from "@chakra-ui/react";
+import { Appbar } from "./components/Appbar";
+import { Maintext } from "./components/Maintext";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Appbar">
+        <Box p={3} borderWidth="1px" borderRadius="lg" overflow="hidden">
+          <Appbar />
+        </Box>
+      </div>
+
+      <div className="mainText">
+        <Box p={5} borderWidth="1px" borderRadius="lg" overflow="hidden">
+          <Center>
+            <Maintext />
+            <br/>
+            <Button color="black">Sign up now!</Button>
+          </Center>
+        </Box>
+      </div>
     </div>
   );
 }
